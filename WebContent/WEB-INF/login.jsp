@@ -7,12 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form name="firstForm" action="HomeServlet"
+<form name="firstForm" action="login"
 style="width:50%;margin:auto;background-color:#c1d9fc;padding-bottom:15px;" method="post">
                  
         <h2 style="text-align:center;color:white;background-color:#6683b1;">Accueil</h2>
-        <p style="text-align:center;">Nom : <input type="text" name="login" /></p>
-        <p style="text-align:center;">Password : <input type="password" name="pwd" /></p>
+        <p style="text-align:center;">Nom : <input type="text" name="username" /></p>
+        <p style="text-align:center;">Password : <input type="password" name="password" /></p>
              
         <p style="text-align:center;width:50%;margin:auto;"><input type="submit" name="Valider" value="se connecter"/></p>
          
