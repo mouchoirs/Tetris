@@ -10,11 +10,11 @@
 <form name="firstForm" action="HomeServlet"
 style="width:50%;margin:auto;background-color:#c1d9fc;padding-bottom:15px;" method="post">
                  
-        <h2 style="text-align:center;color:white;background-color:#6683b1;">Espace Client</h2>
+        <h2 style="text-align:center;color:white;background-color:#6683b1;">Accueil</h2>
         <p style="text-align:center;">Nom : <input type="text" name="login" /></p>
         <p style="text-align:center;">Password : <input type="password" name="pwd" /></p>
              
-        <p style="text-align:center;width:50%;margin:auto;"><input type="submit" name="Valider" value="Valider"/></p>
+        <p style="text-align:center;width:50%;margin:auto;"><input type="submit" name="Valider" value="se connecter"/></p>
          
     </form>
 </body>
