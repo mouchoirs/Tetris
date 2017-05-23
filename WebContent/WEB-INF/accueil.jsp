@@ -8,5 +8,8 @@
 </head>
 <body>
 <h1> Coucou  <%=request.getParameter("login")%> </h1>
+<form action="home">
+<input type="submit" value="Deconnexion">
+</form>
 </body>
 </html>
