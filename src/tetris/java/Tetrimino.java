@@ -1,7 +1,7 @@
 package tetris.java;
 import java.util.UUID;
 
-public class Tetrimino{
+public class Tetrimino extends TetriminoApplicationDAO{
 
 	private String id;
 	private String nom;
@@ -31,7 +31,5 @@ public class Tetrimino{
 		this.nom = nom;
 		this.couleur = couleur;
 		this.id = UUID.randomUUID().toString();
-		
-		
 	}
 }
