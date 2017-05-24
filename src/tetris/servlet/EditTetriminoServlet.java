@@ -16,22 +16,33 @@ import tetris.java.TetriminoApplicationDAO;
 @WebServlet("/editTetrimino")
 public class EditTetriminoServlet extends HttpServlet {
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//on récupère un id (tetriminoASupprimer) d'un paramètre (idTetriminos) dans l'URL
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// on récupère un id (tetriminoASupprimer) d'un paramètre (idTetriminos)
+		// dans l'URL
 		String tetrimiosAEditer = request.getParameter("idTetriminos");
-		
-		//on vient chercher avec la methode find, l'id du tetriminoASupprimer, dans le Map
-		//on met le nom de la classe qui contient la méthode car il s'agit d'une méthode statique
-		Tetrimino tetriEdit = TetriminoApplicationDAO.find(tetrimiosAEditer); 
 
-		//on se redirige vers la page qui affiche la liste des tetriminos.
-		this.getServletContext().getRequestDispatcher("/WEB-INF/editTetrimino.jsp").forward(request, response);	
+		// on vient chercher avec la methode find, l'id du tetriminoASupprimer,
+		// dans le Map
+		// on met le nom de la classe qui contient la méthode car il s'agit
+		// d'une méthode statique
+		Tetrimino tetriEdit = TetriminoApplicationDAO.find(tetrimiosAEditer);
+
+		if (tetriEdit == null) {
+
+			Tetrimino NewTetri = new Tetrimino(request.getParameter("nomTetrimino"), request.getParameter("couleurTetrimino"), request.getParameter("idTetrimino"));
+			TetriminoApplicationDAO.save(NewTetri);
+			this.getServletContext().getRequestDispatcher("/WEB-INF/editTetrimino.jsp").forward(request, response);
+		} else {
+			this.getServletContext().getRequestDispatcher("/WEB-INF/editTetrimino.jsp").forward(request, response);
+		}
+		// on se redirige vers la page qui affiche la liste des tetriminos.
 	}
 
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		this.getServletContext().getRequestDispatcher("/WEB-INF/tetriminos.jsp").forward(request, response);
 	}
 
 }
