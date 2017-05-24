@@ -1,11 +1,11 @@
 package tetris.java;
 import java.util.UUID;
 
-public class Tetrimino {
+public class Tetrimino{
 
 	private String id;
 	private String nom;
-	private String couleur ;
+	private String couleur;
 	
 	
 	public String getId() {
