@@ -1,8 +1,10 @@
 package src.fr.ascadis.model;
 
+import javax.ejb.Stateless;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -14,8 +16,7 @@ import com.sun.istack.internal.NotNull;
 public class Utilisateur {
 
 	@Id
-	@GeneratedValue(generator="system-uuid")
-	@GenericGenerator(name="system-uuid", strategy="uuid")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
 	@Column(name="UTI_NOM")

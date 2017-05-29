@@ -24,11 +24,7 @@ public class SubscribeServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		
-		
-		
-		response.sendRedirect("home");
-		
+	
 	}
 
 }

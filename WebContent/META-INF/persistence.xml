@@ -9,17 +9,12 @@
 		<!-- Modification du Provider OpenJPA pour utiliser Hibernate -->
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-		<!-- Récupération de la DataSource "NomDataSource" inscrit dans TomEE -->
-		<jta-data-source>java:openejb/Resource/NomDataSource</jta-data-source>
+		<!-- Récupération de la DataSource "Tetris" inscrit dans TomEE -->
+		<jta-data-source>java:openejb/Resource/Tetris</jta-data-source>
 
 
 		<!-- Options d'utilisation Hibernate -->
 		<properties>
-			<!-- A préciser si non-utilisation de la DataSource JNDI -->
-			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/*nom_base_donnee*" />
-			<property name="hibernate.connection.driver" value="com.mysql.jdbc.Driver" />
-			<property name="hibernate.connection.user" value="*nom_utilisateur*" />
-			<property name="hibernate.connection.password" value="*mot_de_passe*" />
 
 			<!-- Permet d'exécuter les requêtes DDL pour la génération de la base de données -->
 			<!-- Valeurs possibles : validate, update, create, create-drop -->
@@ -34,7 +29,7 @@
 
 
 			<!-- Ligne à ajouter si vous rencontrez une exception "Unable to build Hibernate SessionFactory" -->
-			<property name="tomee.jpa.factory.lazy" value="true" />
+			<property name="tomee.jpa.cdi" value="false" />
 		</properties>
 	</persistence-unit>
 </persistence>
