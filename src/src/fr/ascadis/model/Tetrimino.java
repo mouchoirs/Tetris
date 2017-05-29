@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.UUID;
 
+import com.sun.istack.internal.NotNull;
+
 @Entity
 @Table(name="tetrimino")
 

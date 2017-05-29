@@ -19,6 +19,8 @@ public class LoginServlet extends DataAccessServlet
 	
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
 	{
+		
+		
 		req.getSession().setAttribute("username", req.getParameter("username"));
 		resp.sendRedirect("home");
 	}
