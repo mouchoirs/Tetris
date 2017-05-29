@@ -4,13 +4,24 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.UUID;
 
+@Entity
+@Table(name="tetrimino")
 
 public class Tetrimino implements Serializable
 {
 	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@GeneratedValue(generator="system-uuid")
+	@GenericGenerator(name="system-uuid", strategy="uuid")
 	private String id;
+	
+	@Column(name="TET_NOM")
+	@NotNull
 	private String nom;
+	
+	@Column(name="TET_COULEUR")
+	@NotNull
 	private String couleur;
 	
 	
@@ -48,6 +59,7 @@ public class Tetrimino implements Serializable
 		this.nom = nom;
 		this.couleur = couleur;
 	}
-	
+	@ManyToMany
+	@JoinColumn(name="TET_UTILISATEUR_ID")
 	private List<Utilisateur> utilisateurs;
 }
