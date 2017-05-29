@@ -1,8 +1,8 @@
 package src.fr.ascadis.model;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.UUID;
-
 
 
 public class Tetrimino implements Serializable
@@ -48,4 +48,6 @@ public class Tetrimino implements Serializable
 		this.nom = nom;
 		this.couleur = couleur;
 	}
+	
+	private List<Utilisateur> utilisateurs;
 }
