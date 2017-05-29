@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import src.fr.ascadis.Rendu;
+
 /**
  * Servlet implementation class SubscribeServlet
  */
@@ -16,14 +18,17 @@ public class SubscribeServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		this.getServletContext().getRequestDispatcher("/WEB-INF/subscribe.jsp").forward(request, response);	}
+		Rendu.pageSubscribe(this.getServletContext(), request, response); 
+		}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		
+		
+		
+		
+		response.sendRedirect("home");
+		
 	}
 
 }

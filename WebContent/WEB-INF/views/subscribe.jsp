@@ -8,14 +8,45 @@
 </head>
 <body>
 
-<form method="post" action="home">
-<p>Nom :<br><input type="text" name="username"><br></p>
-<p>Prenom :<br><input type="text" name="username"><br></p>
-<p>Nom d'utilisateur :<br><input type="text" name="username"><br></p>
-<p>Mot de passe :<br> <input type="password" name="password"><br></p>
-<p>Vérification du mot de passe :<br><input type="password" name="username"><br></p>
-<input type="submit" value="connexion">
+	<form method="post" action="home">
+		<input type="hidden" name="action" value="subscribe" />
 
-</form>
+		<div class="input-field">
+			<i class="material-icons prefix">account_circle</i> <input id="name"
+				type="text" class="validate" name="nom" /> <label for="name">Nom</label>
+		</div>
+
+
+		<div class="input-field">
+			<i class="material-icons prefix">account_circle</i> <input id="name"
+				type="text" class="validate" name="prenom" /> <label for="name">Prénom</label>
+		</div>
+
+
+		<div class="input-field">
+			<i class="material-icons prefix">account_circle</i> <input id="name"
+				type="text" class="validate" name="nom_util" /> <label for="name">Nom
+				d'utilisateur</label>
+		</div>
+
+
+		<div class="input-field">
+			<i class="material-icons prefix">vpn_key</i> <input id="name"
+				type="password" class="validate" name="mdp" /> <label for="name">Mot
+				de passe</label>
+		</div>
+
+		<div class="input-field">
+			<i class="material-icons prefix">vpn_key</i> <input id="name"
+				type="password" class="validate" name="verif_mdp" /> <label for="name">Vérification
+				du mot de passe</label>
+		</div>
+
+
+		<button class="btn waves-effect waves-light" type="submit">
+			Connexion<i class="material-icons right">send</i>
+		</button>
+
+	</form>
 </body>
 </html>

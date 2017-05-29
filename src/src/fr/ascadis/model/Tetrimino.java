@@ -1,8 +1,13 @@
 package src.fr.ascadis.model;
 
 import java.io.Serializable;
-import java.util.List;
 import java.util.UUID;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 import com.sun.istack.internal.NotNull;
 
@@ -61,7 +66,5 @@ public class Tetrimino implements Serializable
 		this.nom = nom;
 		this.couleur = couleur;
 	}
-	@ManyToMany
-	@JoinColumn(name="TET_UTILISATEUR_ID")
-	private List<Utilisateur> utilisateurs;
+
 }

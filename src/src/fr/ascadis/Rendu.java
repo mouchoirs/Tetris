@@ -25,6 +25,11 @@ public class Rendu
 		pagePrincipale("Bienvenue", "/WEB-INF/views/login.jsp", context, req, resp);
 	}
 	
+	public static void pageSubscribe(ServletContext context, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
+	{
+		pagePrincipale("Bienvenue", "/WEB-INF/views/subscribe.jsp", context, req, resp);
+	}
+	
 	
 	public static void listeTetriminos(String titrePage, List<Tetrimino> tetriminos, boolean montrerActions, ServletContext context, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
 	{
