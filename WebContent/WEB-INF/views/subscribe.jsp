@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<form method="post" action="home">
+	<form method="post" action="subscribe">
 		<input type="hidden" name="action" value="subscribe" />
 
 		<div class="input-field">
