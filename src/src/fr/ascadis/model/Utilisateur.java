@@ -15,6 +15,11 @@ import com.sun.istack.internal.NotNull;
 
 public class Utilisateur {
 
+	
+	public Utilisateur(){
+		
+	}
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;

@@ -23,7 +23,7 @@ public class LoginServlet extends DataAccessServlet {
 
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		user.setUsername(req.getParameter("username"));
-
+		
 		if (this.utilisateurDao.find(user.getId()) == null) {
 
 		} else {

@@ -12,33 +12,33 @@
 		<input type="hidden" name="action" value="subscribe" />
 
 		<div class="input-field">
-			<i class="material-icons prefix">account_circle</i> <input id="name"
-				type="text" class="validate" name="nom" /> <label for="name">Nom</label>
+			<i class="material-icons prefix">account_circle</i> <input id="nom"
+				type="text" class="validate" name="nom" /> <label for="nom">Nom</label>
 		</div>
 
 
 		<div class="input-field">
-			<i class="material-icons prefix">account_circle</i> <input id="name"
-				type="text" class="validate" name="prenom" /> <label for="name">Prénom</label>
+			<i class="material-icons prefix">account_circle</i> <input id="prenom"
+				type="text" class="validate" name="prenom" /> <label for="prenom">Prénom</label>
 		</div>
 
 
 		<div class="input-field">
-			<i class="material-icons prefix">account_circle</i> <input id="name"
+			<i class="material-icons prefix">account_circle</i> <input id="nom_util"
 				type="text" class="validate" name="nom_util" /> <label for="name">Nom
 				d'utilisateur</label>
 		</div>
 
 
 		<div class="input-field">
-			<i class="material-icons prefix">vpn_key</i> <input id="name"
-				type="password" class="validate" name="mdp" /> <label for="name">Mot
+			<i class="material-icons prefix">vpn_key</i> <input id="mdp"
+				type="password" class="validate" name="mdp" /> <label for="mdp">Mot
 				de passe</label>
 		</div>
 
 		<div class="input-field">
-			<i class="material-icons prefix">vpn_key</i> <input id="name"
-				type="password" class="validate" name="verif_mdp" /> <label for="name">Vérification
+			<i class="material-icons prefix">vpn_key</i> <input id="verif_mdp"
+				type="password" class="validate" name="verif_mdp" /> <label for="verif_mdp">Vérification
 				du mot de passe</label>
 		</div>
 

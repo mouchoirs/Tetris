@@ -15,6 +15,6 @@ public interface DAO<T> {
 
 	public abstract boolean delete(T object);
 
-	public EntityManagerFactory emf = Persistence.createEntityManagerFactory("PeristenceUnit");
+	//public EntityManagerFactory emf = Persistence.createEntityManagerFactory("PeristenceUnit");
 
 }
