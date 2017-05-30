@@ -23,26 +23,30 @@ public class SubscribeServlet extends HttpServlet {
 
 	@EJB
 	private Utilisateur user;
-	
+
 	@EJB
 	private DAO<Utilisateur> userDao;
-	
-	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		Rendu.pageSubscribe(this.getServletContext(), request, response); 
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		Rendu.pageSubscribe(this.getServletContext(), request, response);
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		if (request.getParameter("mdp").equals(request.getParameter("verif_mdp"))) {
+			user.setNom(request.getParameter("nom"));
+			user.setPrenom(request.getParameter("prenom"));
+			user.setUsername(request.getParameter("nom_util"));
+			user.setMdp(request.getParameter("mdp"));
+
+			this.userDao.save(user);
+		} else {
+			Rendu.pageSubscribe(this.getServletContext(), request, response);
 		}
 
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		user.setNom(request.getParameter("nom"));
-		user.setPrenom(request.getParameter("prenom"));
-		user.setUsername(request.getParameter("nom_util"));
-		user.setMdp(request.getParameter("mdp"));
-
-		this.userDao.save(user);
-		
 	}
 
 }
