@@ -20,7 +20,7 @@
 	</button>
 </form><br>
 
-<form method="post" action="subscribe">
+<form method="get" action="subscribe">
 	<button class="btn waves-effect waves-light" type="submit">
 		Nouvel utilisateur ? <i class="material-icons right">send</i>
 	</button>

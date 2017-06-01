@@ -22,20 +22,13 @@ public class LoginServlet extends DataAccessServlet {
 
 	private Utilisateur user = new Utilisateur();
 
+	
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		user.setUsername(req.getParameter("username"));
 		user.setMdp(req.getParameter("password"));
-		//System.out.println(user.findByUsername(user.getUsername(), user.getMdp()));
-		
-		//user.setId(user.findByUsername(user.getUsername(), user.getMdp()));
 
-		//if (user.getId() == null){
-		//	resp.sendRedirect("home");
-			
-		//} else {
-		//	req.getSession().setAttribute("username", req.getParameter("username"));
-		//	resp.sendRedirect("home");
-		//}
+			req.getSession().setAttribute("username", req.getParameter("username"));
+			resp.sendRedirect("home");
+		}
 	}
-}
