@@ -6,12 +6,20 @@
 		<div class="container">
 			<a href="#" class="brand-logo">Tetris - ${ pageTitle }</a>
 			
-			<c:if test="${ username != null }">
+			<c:if test="${ username == 'admin' }">
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
-					<li><a href="home">Accueil</a></li>
 					<li><a href="tetriminos">Tetriminos</a></li>
 				</ul>
 			</c:if>
+			
+			<c:if test="${ username != null  }">
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="home">Accueil</a></li>
+				</ul>
+			</c:if>
+			
+			
+			
 		</div>
 	</div>
 </nav>

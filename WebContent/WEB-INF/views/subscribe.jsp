@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+	
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -18,15 +21,16 @@
 
 
 		<div class="input-field">
-			<i class="material-icons prefix">account_circle</i> <input id="prenom"
-				type="text" class="validate" name="prenom" /> <label for="prenom">Prénom</label>
+			<i class="material-icons prefix">account_circle</i> <input
+				id="prenom" type="text" class="validate" name="prenom" /> <label
+				for="prenom">Prénom</label>
 		</div>
 
 
 		<div class="input-field">
-			<i class="material-icons prefix">account_circle</i> <input id="nom_util"
-				type="text" class="validate" name="nom_util" /> <label for="name">Nom
-				d'utilisateur</label>
+			<i class="material-icons prefix">account_circle</i> <input
+				id="nom_util" type="text" class="validate" name="nom_util" /> <label
+				for="name">Nom d'utilisateur</label>
 		</div>
 
 
@@ -38,15 +42,34 @@
 
 		<div class="input-field">
 			<i class="material-icons prefix">vpn_key</i> <input id="verif_mdp"
-				type="password" class="validate" name="verif_mdp" /> <label for="verif_mdp">Vérification
-				du mot de passe</label>
+				type="password" class="validate" name="verif_mdp" /> <label
+				for="verif_mdp">Vérification du mot de passe</label>
+		</div>
+
+		<div class="input-field">
+			<input id="joueur_checkbox" type="radio" class="validate"
+				name="type_compte" value="Joueur" checked/> 
 		</div>
 
 
+		<div class="input-field">
+			<input id="spect_checkbox" type="radio" class="validate"
+				name="type_compte" value="Spectateur"/> 
+		</div>
+		<br><br>
+		<div>
 		<button class="btn waves-effect waves-light" type="submit">
 			Connexion<i class="material-icons right">send</i>
 		</button>
+		</div>
+
+
+
+
+
 
 	</form>
+
+
 </body>
 </html>
