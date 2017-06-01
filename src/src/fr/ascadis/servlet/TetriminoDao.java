@@ -2,12 +2,16 @@ package src.fr.ascadis.servlet;
 
 import java.util.List;
 
-import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
 import src.fr.ascadis.model.Tetrimino;
-@Stateless
+
+@Repository
+@Transactional
 public class TetriminoDao implements DAO<Tetrimino>{
 
 	@PersistenceContext
@@ -22,7 +26,7 @@ public class TetriminoDao implements DAO<Tetrimino>{
 
 	@Override
 	public List<Tetrimino> findAll() {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stube
 		return this.em.createQuery("from Tetrimino p", Tetrimino.class).getResultList();
 	}
 

@@ -2,15 +2,18 @@ package src.fr.ascadis.servlet;
 
 import java.util.List;
 
-import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
 import src.fr.ascadis.dao.IUtilisateurDAO;
 import src.fr.ascadis.model.Utilisateur;
 
-@Stateless
+@Repository
+@Transactional
 public class UtilisateurDao implements IUtilisateurDAO	 {
 
 	@PersistenceContext
@@ -56,7 +59,6 @@ public class UtilisateurDao implements IUtilisateurDAO	 {
 	public void setUser(Utilisateur user) {
 		this.user = user;
 	}
-
 
 	
 	public Utilisateur findByInfos(String utilisateur, String password){
