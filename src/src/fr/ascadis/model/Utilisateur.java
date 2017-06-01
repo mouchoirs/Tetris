@@ -1,6 +1,5 @@
 package src.fr.ascadis.model;
 
-import javax.ejb.Stateless;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.sun.istack.internal.NotNull;
+
 
 @Entity
 @Table(name="utilisateur")
@@ -78,6 +78,5 @@ public class Utilisateur {
 		this.mdp = mdp;
 	}
 	
-
 	
 }

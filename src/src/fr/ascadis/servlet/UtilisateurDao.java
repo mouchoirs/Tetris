@@ -5,16 +5,19 @@ import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
+import src.fr.ascadis.dao.IUtilisateurDAO;
 import src.fr.ascadis.model.Utilisateur;
 
 @Stateless
-public class UtilisateurDao implements DAO<Utilisateur> {
+public class UtilisateurDao implements IUtilisateurDAO	 {
 
 	@PersistenceContext
 	private EntityManager em;
 	
 	private Utilisateur user;
+	
 	
 	@Override
 	public Utilisateur find(int id) {
@@ -54,5 +57,17 @@ public class UtilisateurDao implements DAO<Utilisateur> {
 		this.user = user;
 	}
 
+
+	
+	public Utilisateur findByInfos(String utilisateur, String password){
+		Query myQuery = em.createQuery("From Utilisateur u where u.username=:username and u.mdp=:password", Utilisateur.class);
+		myQuery.setParameter("username", utilisateur); 
+		myQuery.setParameter("password", password); 
+		return (Utilisateur)myQuery.getSingleResult();
+		
+	}
+	
+	
+	
 	
 }

@@ -8,27 +8,37 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import src.fr.ascadis.dao.IUtilisateurDAO;
 import src.fr.ascadis.model.Utilisateur;
-import src.fr.ascadis.servlet.DAO;
 import src.fr.ascadis.servlet.DataAccessServlet;
-import src.fr.ascadis.servlet.UtilisateurDao;
 
 @WebServlet("/login")
 public class LoginServlet extends DataAccessServlet {
 	private static final long serialVersionUID = 1L;
 
-	@EJB//(mappedName="UtilisateurDao")
-	private UtilisateurDao userdao;
-
-	private Utilisateur user = new Utilisateur();
+	@EJB(mappedName="UtilisateurDao")
+	private IUtilisateurDAO userdao;
 
 	
+	
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
-		user.setUsername(req.getParameter("username"));
-		user.setMdp(req.getParameter("password"));
 
-			req.getSession().setAttribute("username", req.getParameter("username"));
+		
+		try{
+			
+			Utilisateur myUser = userdao.findByInfos(req.getParameter("username"), req.getParameter("password"));
+			if (myUser==null){
+				resp.getWriter().print("cet utilisateur n'existe pas.");
+			}
+			else{
+				req.getSession().setAttribute("username", req.getParameter("username"));
+				resp.sendRedirect("home");
+			}
+		
+		}
+		catch (Exception e){
 			resp.sendRedirect("home");
+		}
+				
 		}
 	}
