@@ -16,9 +16,7 @@ import com.sun.istack.internal.NotNull;
 public class Utilisateur {
 
 	
-	public Utilisateur(){
-		
-	}
+	public Utilisateur(){}
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -80,6 +78,6 @@ public class Utilisateur {
 		this.mdp = mdp;
 	}
 	
-	
+
 	
 }

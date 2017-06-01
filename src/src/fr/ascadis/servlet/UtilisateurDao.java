@@ -14,6 +14,7 @@ public class UtilisateurDao implements DAO<Utilisateur> {
 	@PersistenceContext
 	private EntityManager em;
 	
+	private Utilisateur user;
 	
 	@Override
 	public Utilisateur find(int id) {
@@ -45,4 +46,13 @@ public class UtilisateurDao implements DAO<Utilisateur> {
 		
 	}
 
+	public Utilisateur getUser() {
+		return user;
+	}
+
+	public void setUser(Utilisateur user) {
+		this.user = user;
+	}
+
+	
 }
