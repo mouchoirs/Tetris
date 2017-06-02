@@ -20,7 +20,7 @@ import src.fr.ascadis.servlet.DataAccessServlet;
 @WebServlet("/subscribe")
 public class SubscribeServlet extends DataAccessServlet {
 
-	
+
 	private Utilisateur user = new Utilisateur();
 
 	@Autowired
@@ -35,23 +35,21 @@ public class SubscribeServlet extends DataAccessServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		user.setNom(request.getParameter("nom"));
+		user.setPrenom(request.getParameter("prenom"));
+		user.setUsername(request.getParameter("nom_util"));
+		user.setMdp(request.getParameter("mdp"));
 
-			user.setNom(request.getParameter("nom"));
-			user.setPrenom(request.getParameter("prenom"));
-			user.setUsername(request.getParameter("nom_util"));
-			user.setMdp(request.getParameter("mdp"));
+		if (request.getParameter("nom") != "" && request.getParameter("prenom") != ""
+				&& request.getParameter("nom_util") != "" && request.getParameter("mdp") != ""
+				&& request.getParameter("mdp").equals(request.getParameter("verif_mdp"))) {
+			utilisateurDao.save(user);
+			response.sendRedirect("home");
 
-			if (request.getParameter("nom")!="" && request.getParameter("prenom")!="" &&
-					request.getParameter("nom_util")!="" && request.getParameter("mdp")!="" && 
-					request.getParameter("mdp").equals(request.getParameter("verif_mdp"))) {
-				utilisateurDao.save(user);
-				response.sendRedirect("home");
-				
-			} else {
-					
-				Rendu.pageSubscribe(this.getServletContext(), request, response);
-			}
+		} else {
 
+			Rendu.pageSubscribe(this.getServletContext(), request, response);
+		}
 
 	}
 

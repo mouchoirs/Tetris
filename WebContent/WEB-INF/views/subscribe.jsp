@@ -48,14 +48,17 @@
 
 		<div class="input-field">
 			<input id="joueur_checkbox" type="radio" class="validate"
-				name="type_compte" value="Joueur" checked/> 
+				name="type_compte" value="Joueur" checked/> <label
+				for="joueur_checkbox">Joueur</label>
 		</div>
 
 
 		<div class="input-field">
 			<input id="spect_checkbox" type="radio" class="validate"
-				name="type_compte" value="Spectateur"/> 
+				name="type_compte" value="Spectateur"/> <label
+				for="spect_checkbox">Spectateur</label>
 		</div>
+		
 		<br><br>
 		<div>
 		<button class="btn waves-effect waves-light" type="submit">
