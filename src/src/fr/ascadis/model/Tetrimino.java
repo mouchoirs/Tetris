@@ -1,6 +1,7 @@
 package src.fr.ascadis.model;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.UUID;
 
 import javax.persistence.Column;
@@ -37,7 +38,10 @@ public class Tetrimino implements Serializable
 	@NotNull
 	private String valeur;
 	
-
+	@Column(name="TET_FIGURES")
+	@NotNull
+	private List<Figures> listeFigures;
+	
 	
 
 	public void setNombreDeFigures(int nombreDeFigures) {

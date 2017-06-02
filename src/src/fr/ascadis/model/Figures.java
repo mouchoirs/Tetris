@@ -5,6 +5,7 @@ public class Figures extends Tetrimino {
 	public Figures() {
 		// TODO Auto-generated constructor stub
 		
+	
 	}
 
 	public Figures(String nom, String couleur, String valeur) {
@@ -14,7 +15,15 @@ public class Figures extends Tetrimino {
 Block block = new Block();	}
 
 	
-	
+	private int idFigure;
+
+	public int getIdFigure() {
+		return idFigure;
+	}
+
+	public void setIdFigure(int idFigure) {
+		this.idFigure = idFigure;
+	}
 
 	@Override
 	public void setNombreDeFigures(int nombreDeFigures) {
