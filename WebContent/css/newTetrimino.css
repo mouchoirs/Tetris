@@ -23,3 +23,53 @@
 #tetrimino_valeur {
 	width: 200px;
 }
+.formulaire{
+	display:inline-block;
+	width: 300px;
+
+	vertical-align:top;
+	float:left;
+}
+
+
+#table1{
+	border: 1px solid black;
+	width : 130px;
+	length: 130px;
+	display:inline-block;
+	vertical-align:top;
+	margin-right:20px;
+}
+#table2{
+	border: 1px solid black;
+	width : 130px;
+	length: 130px;
+	display:inline-block;
+	vertical-align:top;
+	margin-right:20px;
+
+}
+#table3{
+	border: 1px solid black;
+	width : 130px;
+	length: 130px;
+	display:inline-block;
+	vertical-align:top;
+	margin-right:20px;
+
+}
+#table4{
+	border: 1px solid black;
+	width : 130px;
+	length: 130px;
+	display:inline-block;
+	vertical-align:top;
+	margin-right:20px;
+
+}
+
+td{
+	border:1px solid black;
+	width:40px;
+	length:40px;
+}

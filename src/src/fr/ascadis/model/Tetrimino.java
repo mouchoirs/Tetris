@@ -38,9 +38,9 @@ public class Tetrimino implements Serializable
 	@NotNull
 	private String valeur;
 	
-	@Column(name="TET_FIGURES")
+	/*@Column(name="TET_FIGURES")
 	@NotNull
-	private List<Figures> listeFigures;
+	private List<Figures> listeFigures;*/
 	
 	
 
