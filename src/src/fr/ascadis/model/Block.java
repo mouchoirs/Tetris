@@ -9,7 +9,9 @@ public class Block  {
 		// TODO Auto-generated constructor stub
 		
 	
-	List<Block> blocks =  new ArrayList<Block>() ;
+
+	
+	Block blocks[][] = new Block[4][4] ;
 	}
 
 }
