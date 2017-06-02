@@ -1,0 +1,25 @@
+#formulaire_tetri {
+	width: 100px;
+	line-height: 40px;
+}
+
+#formulaire_tetri label {
+	font-size: 30px;
+	color: black;
+}
+
+#tetrimino_nom {
+	width: 200px;
+}
+
+#tetrimino_couleur {
+	width: 200px;
+}
+
+#table {
+	float: left;
+}
+
+#tetrimino_valeur {
+	width: 200px;
+}

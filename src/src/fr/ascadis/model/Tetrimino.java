@@ -78,7 +78,7 @@ public class Tetrimino implements Serializable
 		super();
 		this.nom = nom;
 		this.couleur = couleur;
-		this.valeur = valeur ;
+		this.valeur = Valeur ;
 	}
 
 }
