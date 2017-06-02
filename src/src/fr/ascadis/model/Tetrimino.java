@@ -37,6 +37,15 @@ public class Tetrimino implements Serializable
 	@NotNull
 	private String valeur;
 	
+
+	
+
+	public void setNombreDeFigures(int nombreDeFigures) {
+		this.nombreDeFigures = nombreDeFigures;
+	}
+
+	private int nombreDeFigures;
+	
 	public String getValeur() {
 		return valeur;
 	}
