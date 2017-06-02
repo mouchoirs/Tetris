@@ -39,6 +39,7 @@ public class SubscribeServlet extends DataAccessServlet {
 		user.setPrenom(request.getParameter("prenom"));
 		user.setUsername(request.getParameter("nom_util"));
 		user.setMdp(request.getParameter("mdp"));
+		user.setTypeDeCompte(request.getParameter("type_compte"));
 
 		if (request.getParameter("nom") != "" && request.getParameter("prenom") != ""
 				&& request.getParameter("nom_util") != "" && request.getParameter("mdp") != ""

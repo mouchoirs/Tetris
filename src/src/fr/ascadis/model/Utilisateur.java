@@ -38,6 +38,19 @@ public class Utilisateur {
 	@NotNull
 	private String mdp;
 
+	@Column(name="UTI_TYPECOMPTE")
+	@NotNull
+	private String typeDeCompte;
+	
+	
+	public String getTypeDeCompte() {
+		return typeDeCompte;
+	}
+
+	public void setTypeDeCompte(String typeDeCompte) {
+		this.typeDeCompte = typeDeCompte;
+	}
+
 	public int getId() {
 		return id;
 	}
