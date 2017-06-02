@@ -39,7 +39,7 @@ public class EditTetriminoServlet extends DataAccessServlet
 		
 		else
 		{
-			myTetrimino = new Tetrimino("Pas de nom", "000");
+			myTetrimino = new Tetrimino("Pas de nom", "000","000");
 			myTitre = "Nouveau tetrimino";
 		}
 		
@@ -61,6 +61,7 @@ public class EditTetriminoServlet extends DataAccessServlet
 		
 		myTetrimino.setNom(req.getParameter("tetrimino_nom"));
 		myTetrimino.setCouleur(req.getParameter("tetrimino_couleur"));
+		myTetrimino.setValeur(req.getParameter("tetrimino_valeur"));
 		
 		this.getTetriminoDAO().save(myTetrimino);
 		resp.sendRedirect("tetriminos");

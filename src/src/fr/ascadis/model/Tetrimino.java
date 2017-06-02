@@ -33,7 +33,18 @@ public class Tetrimino implements Serializable
 	@NotNull
 	private String couleur;
 	
+	@Column(name="TET_VALEUR")
+	@NotNull
+	private String valeur;
 	
+	public String getValeur() {
+		return valeur;
+	}
+
+	public void setValeur(String valeur) {
+		this.valeur = valeur;
+	}
+
 	public String getId() {
 		return id;
 	}
@@ -63,10 +74,11 @@ public class Tetrimino implements Serializable
 		this.id = UUID.randomUUID().toString();
 	}
 	
-	public Tetrimino(String nom, String couleur) {
+	public Tetrimino(String nom, String couleur, String Valeur) {
 		super();
 		this.nom = nom;
 		this.couleur = couleur;
+		this.valeur = valeur ;
 	}
 
 }
