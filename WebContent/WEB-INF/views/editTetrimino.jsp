@@ -19,7 +19,7 @@
 
 	<div class="input-field">
 		<input id="tetrimino_couleur" type="text" class="validate"
-			name="tetrimino_couleur" value="${ tetrimino.couleur }" /> <label
+			name="tetrimino_couleur" value="${tetrimino.couleur}" /> <label
 			for="tetrimino_couleur">Couleur</label>
 	</div>
 
@@ -36,11 +36,9 @@
 
 <br>
 <br>
-
-<table id="table1"><caption>Figure 1</caption>
-
+<table id="table1" ><caption>Figure 1</caption> 
 	<tr>
-		<td></td>
+		<td onclick="myFunction(this, 'blue')"></td>
 		<td></td>
 		<td></td>
 		<td></td>
@@ -147,3 +145,8 @@
 
 </table>
 
+<script>
+function myFunction(elmnt, clr) {
+    elmnt.style.backgroundColor = clr;
+}
+</script>
