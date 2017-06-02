@@ -29,8 +29,7 @@ public class Rendu
 	{
 		pagePrincipale("Bienvenue", "/WEB-INF/views/subscribe.jsp", context, req, resp);
 	}
-	
-	
+		
 	public static void listeTetriminos(String titrePage, List<Tetrimino> tetriminos, boolean montrerActions, ServletContext context, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
 	{
 		req.setAttribute("tetriminos", tetriminos);
@@ -38,8 +37,7 @@ public class Rendu
 		
 		pagePrincipale(titrePage, "/WEB-INF/views/tetriminos.jsp", context, req, resp);
 	}
-	
-	
+		
 	public static void pagePrincipale(String title, String contentJsp, ServletContext context, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
 	{
 		if (title == null)

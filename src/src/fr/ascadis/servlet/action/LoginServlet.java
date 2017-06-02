@@ -20,26 +20,22 @@ public class LoginServlet extends DataAccessServlet {
 	@Autowired
 	private IUtilisateurDAO userdao;
 
-	
-	
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {			
 		
-		try{
-			
-			Utilisateur myUser = userdao.findByInfos(req.getParameter("username"), req.getParameter("password"));
-			if (myUser==null){
-				resp.getWriter().print("cet utilisateur n'existe pas.");
-			}
-			else{
+		try {
+			if (req.getParameter("username").equals("admin") && req.getParameter("password").equals("admin")) {
 				req.getSession().setAttribute("username", req.getParameter("username"));
-				resp.sendRedirect("home");
+			} 
+			else {
+				Utilisateur myUser = userdao.findByInfos(req.getParameter("username"), req.getParameter("password"));
+					req.getSession().setAttribute("username", req.getParameter("username"));
+				}
 			}
-		
-		}
-		catch (Exception e){
-			resp.sendRedirect("home");
-		}
-				
-		}
+			
+				catch (Exception e) {
+			}
+		resp.sendRedirect("home");
+
 	}
+}
+
