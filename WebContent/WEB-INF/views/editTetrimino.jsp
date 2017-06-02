@@ -39,108 +39,108 @@
 <table id="table1" ><caption>Figure 1</caption> 
 	<tr>
 		<td onclick="myFunction(this, 'blue')"></td>
-		<td></td>
-		<td></td>
-		<td></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
 	</tr>
 	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
 	</tr>
 	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
 	</tr>
 	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
 	</tr>
 
 </table>
 <table id="table2" ><caption>Figure 2</caption> 
 	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
 	</tr>
 	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
 	</tr>
 	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
 	</tr>
 	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
 	</tr>
 
 </table>
 <table id="table3" ><caption>Figure 3</caption>
 	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
 	</tr>
 	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
 	</tr>
 	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
 	</tr>
 	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
 	</tr>
 
 </table>
 <table id="table4" ><caption>Figure 4</caption>
 	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
 	</tr>
 	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
 	</tr>
 	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
 	</tr>
 	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
+		<td onclick="myFunction(this, 'blue')"></td>
 	</tr>
 
 </table>
