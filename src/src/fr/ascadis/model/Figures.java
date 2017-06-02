@@ -9,6 +9,8 @@ public class Figures extends Tetrimino {
 	public Figures(String nom, String couleur, String valeur) {
 		super(nom, couleur, valeur);
 		// TODO Auto-generated constructor stub
-	}
+		 
+		
+Block block = new Block();	}
 
 }
