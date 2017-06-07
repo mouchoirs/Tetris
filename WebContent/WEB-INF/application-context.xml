@@ -38,6 +38,7 @@
 				<property name="showSql" value="true" />
 				<property name="generateDdl" value="true" />
 			</bean>
+		
 		</property>
 	</bean>
 	
@@ -51,4 +52,9 @@
 	
 	<!-- On active la translation d'exception -->
 	<bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+	
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+<property name="basename" value="classpath:messages" />
+<property name="defaultEncoding" value="UTF-8" />
+</bean>
 </beans>
