@@ -15,8 +15,6 @@
 	<!-- On active la délégation des requêtes vers les contrôleurs -->
 	<mvc:annotation-driven />
 
-
-
 	<!-- On configure Tiles -->
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
@@ -27,6 +25,7 @@
 	<bean id="tilesConfigurer"
 		class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
 		<property name="definitions">
+		
 			<list>
 				<value>/WEB-INF/tiles/layout.xml</value>
 				<value>/WEB-INF/tiles/home.xml</value>
