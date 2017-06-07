@@ -51,7 +51,7 @@ public class SecuriteFilter implements Filter
 		myAcceptedURIs.add(new SecurityMatch("/login", SecurityType.Anonyme));
 		myAcceptedURIs.add(new SecurityMatch("/subscribe", SecurityType.Anonyme));
 
-		//Tous les utilisateurs connectés
+		//Tous les utilisateurs connectï¿½s
 		myAcceptedURIs.add(new SecurityMatch("/home", SecurityType.Logged));
 		myAcceptedURIs.add(new SecurityMatch("/logout", SecurityType.Logged));
 		
@@ -86,7 +86,7 @@ public class SecuriteFilter implements Filter
 		
 		if (needSecurityCheck)
 		{
-			Rendu.pageLogin(this.context, request, response);
+			response.sendRedirect("/login");
 			return;
 		}
 		
