@@ -9,6 +9,7 @@
 	<configs>
 	</configs>
 	<autoconfigs>
+		<config>WebContent/WEB-INF/application-context.xml</config>
 	</autoconfigs>
 	<configSets>
 	</configSets>
