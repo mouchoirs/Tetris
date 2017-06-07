@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 
 
 
@@ -26,15 +27,15 @@
 					<span class="card-title activator grey-text text-darken-4">${ tetrimino.nom }<i class="material-icons right">more_vert</i></span>
 					
 					<p>
-						<a class="activator" href="#">Détails</a>
+						<a class="activator" href="#"><spring:message code="tetriminos.details"/></a>
 					</p>
 				</div>
 				
 				
 				<c:if test="${ montrerActions }">
 					<div class="card-action">
-						<a href="deleteTetrimino?tetrimino_id=${ tetrimino.id }">RETIRER</a>
-						<a href="editTetrimino?tetrimino_id=${ tetrimino.id }">EDITER</a>
+						<a href="deleteTetrimino?tetrimino_id=${ tetrimino.id }"><spring:message code="tetriminos.delete"/></a>
+						<a href="editTetrimino?tetrimino_id=${ tetrimino.id }"><spring:message code="tetriminos.edit"/></a>
 					</div>
 				</c:if>
 				
@@ -43,8 +44,8 @@
 					<table>
 						<thead>
 							<tr>
-								<th data-field="name">Attribut</th>
-								<th data-field="valeur">Valeur</th>
+								<th data-field="name"><spring:message code="tetriminos.attribute"/></th>
+								<th data-field="valeur"><spring:message code="tetriminos.value"/></th>
 							</tr>
 						</thead>
 						
