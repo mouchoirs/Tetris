@@ -1,78 +1,51 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-	
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-	
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Inscription</title>
-</head>
-<body>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-	<form method="post" action="subscribe">
-		<input type="hidden" name="action" value="subscribe" />
-
-		<div class="input-field">
-			<i class="material-icons prefix">account_circle</i> <input id="nom"
-				type="text" class="validate" name="nom" /> <label for="nom">Nom</label>
-		</div>
+<c:if test="${ failure != null}">
+	Impossible de s'inscrire. Veuillez recommencer.
+</c:if>
 
 
-		<div class="input-field">
-			<i class="material-icons prefix">account_circle</i> <input
-				id="prenom" type="text" class="validate" name="prenom" /> <label
-				for="prenom">Prénom</label>
-		</div>
-
-
-		<div class="input-field">
-			<i class="material-icons prefix">account_circle</i> <input
-				id="nom_util" type="text" class="validate" name="nom_util" /> <label
-				for="name">Nom d'utilisateur</label>
-		</div>
-
-
-		<div class="input-field">
-			<i class="material-icons prefix">vpn_key</i> <input id="mdp"
-				type="password" class="validate" name="mdp" /> <label for="mdp">Mot
-				de passe</label>
-		</div>
-
-		<div class="input-field">
-			<i class="material-icons prefix">vpn_key</i> <input id="verif_mdp"
-				type="password" class="validate" name="verif_mdp" /> <label
-				for="verif_mdp">Vérification du mot de passe</label>
-		</div>
-
-		<div class="input-field">
-			<input id="joueur_checkbox" type="radio" class="validate"
-				name="type_compte" value="Joueur" checked/> <label
-				for="joueur_checkbox">Joueur</label>
-		</div>
-
-
-		<div class="input-field">
-			<input id="spect_checkbox" type="radio" class="validate"
-				name="type_compte" value="Spectateur"/> <label
-				for="spect_checkbox">Spectateur</label>
-		</div>
+<form method="post">
+	<div class="input-field">
+		<p>
+			<input name="type" type="radio" id="type_joueur" value="1" />
+			<label for="type_joueur">Joueur</label>
+		</p>
 		
-		<br><br>
-		<div>
-		<button class="btn waves-effect waves-light" type="submit">
-			Connexion<i class="material-icons right">send</i>
-		</button>
-		</div>
-
-
-
-
-
-
-	</form>
-
-
-</body>
-</html>
+		<p>
+			<input name="type" type="radio" id="type_spectateur" value="2" />
+			<label for="type_spectateur">Spectateur</label>
+		</p>
+	</div>
+	
+	<div class="input-field">
+		<input id="nom" type="text" class="validate" name="nom" />
+		<label for="nom">Votre nom</label>
+	</div>
+	
+	<div class="input-field">
+		<input id="prenom" type="text" class="validate" name="prenom" />
+		<label for="prenom">Votre prÃ©nom</label>
+	</div>
+	
+	<div class="input-field">
+		<input id="username" type="text" class="validate" name="username" />
+		<label for="username">Votre nom d'utilisateur</label>
+	</div>
+	
+	<div class="input-field">
+		<input id="password" type="password" class="validate" name="password" />
+		<label for="password">Votre mot de passe</label>
+	</div>
+	
+	<div class="input-field">
+		<input id="password-validation" type="password" class="validate" name="password-validation" />
+		<label for="password-validation">VÃ©rification de votre mot de passe</label>
+	</div>
+	
+	
+	<button class="btn waves-effect waves-light" type="submit">
+		OK <i class="material-icons right">send</i>
+	</button>
+</form>

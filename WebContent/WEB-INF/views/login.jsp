@@ -18,10 +18,8 @@
 	<button class="btn waves-effect waves-light" type="submit">
 		OK <i class="material-icons right">send</i>
 	</button>
-</form><br>
-
-<form method="get" action="subscribe">
-	<button class="btn waves-effect waves-light" type="submit">
-		Nouvel utilisateur ? <i class="material-icons right">send</i>
-	</button>
+	
+	<a href="subscribe" class="btn waves-effect waves-light" type="submit">
+		S'inscrire
+	</a>
 </form>

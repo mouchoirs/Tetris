@@ -1,7 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 
-<h1>Bienvenue ${ username } !</h1>
+<h1>Bienvenue ${ utilisateur.prenom } ${ utilisateur.nom } !</h1>
 
 <form method="post" action="logout">
 	<input type="hidden" name="action" value="logout" />
