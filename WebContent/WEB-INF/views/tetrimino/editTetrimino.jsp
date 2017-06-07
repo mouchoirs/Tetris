@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 
 
 <div class="row">
@@ -10,16 +11,16 @@
 			
 			<div class="input-field">
 				<input id="tetrimino_nom" type="text" class="validate" name="tetrimino_nom" value="${ tetrimino.nom }" />
-				<label for="tetrimino_nom">Nom</label>
+				<label for="tetrimino_nom"><spring:message code="tetriminos.name"/></label>
 			</div>
 			
 			<div class="input-field">
 				<input id="tetrimino_couleur" type="text" class="validate" name="tetrimino_couleur" value="${ tetrimino.couleur }" />
-				<label for="tetrimino_couleur">Couleur</label>
+				<label for="tetrimino_couleur"><spring:message code="tetriminos.color"/></label>
 			</div>
 			
 			<button class="btn waves-effect waves-light" type="submit">
-				Valider <i class="material-icons right">send</i>
+				<spring:message code="tetrimino.valider"/> <i class="material-icons right">send</i>
 			</button>
 		</form>
 	</div>
@@ -33,7 +34,7 @@
 			</div>
 			
 			
-			<h5>Liste des figures</h5>
+			<h5><spring:message code="home.logout"/><spring:message code="tetrimino.list"/></h5>
 			
 			<div class="row">
 				<c:forEach items="${ tetrimino.figures }" var="figure">
