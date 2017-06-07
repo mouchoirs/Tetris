@@ -44,10 +44,8 @@ public class SecuriteFilter implements Filter
 		
 		
 		//Tout le monde
-		myAcceptedURIs.add(new SecurityMatch("js/", SecurityType.Anonyme));
-		myAcceptedURIs.add(new SecurityMatch("css/", SecurityType.Anonyme));
-		myAcceptedURIs.add(new SecurityMatch("font/", SecurityType.Anonyme));
-		myAcceptedURIs.add(new SecurityMatch("fonts/", SecurityType.Anonyme));
+		myAcceptedURIs.add(new SecurityMatch("resources/", SecurityType.Anonyme));
+	
 		myAcceptedURIs.add(new SecurityMatch("/login", SecurityType.Anonyme));
 		myAcceptedURIs.add(new SecurityMatch("/subscribe", SecurityType.Anonyme));
 
