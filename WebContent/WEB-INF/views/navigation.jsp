@@ -12,8 +12,8 @@
 					<li><a href="home"><spring:message code="home.logged.title"/></a></li>
 					
 					<!-- Logo Changements langues  -->
-			<!-- 	<li><a href="http://localhost:8080/Tetris/home?lang=fr "><img src="https://morphosearchitecture.files.wordpress.com/2015/10/drapeau-francais.png " alt="FRance"/></a></li> -->
-				<!-- 	<li><a href="http://localhost:8080/Tetris/home?lang=en "><img src="http://www.associationtichri.fr/medias/images/drapeaugb.png " alt="Angleterre"/></a></li> -->
+			<!-- 	<li><a href="?lang=fr "><img src="https://morphosearchitecture.files.wordpress.com/2015/10/drapeau-francais.png " alt="FRance"/></a></li> -->
+				<!-- 	<li><a href="?lang=en "><img src="http://www.associationtichri.fr/medias/images/drapeaugb.png " alt="Angleterre"/></a></li> -->
 					<c:if test="${ utilisateur.type == 0 }">
 						<li><a href="tetriminos">Tetriminos</a></li>
 					</c:if>
