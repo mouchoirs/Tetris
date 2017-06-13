@@ -11,14 +11,14 @@ public class PasswordCheckValidator implements Validator
 	public boolean supports(Class<?> cls) {
 		return InscriptionUtilisateur.class.equals(cls);
 	}
-
-
+	
+	
 	@Override
 	public void validate(Object obj, Errors e) {
 		InscriptionUtilisateur myInscriptionUtilisateur = (InscriptionUtilisateur)obj;
-
+		
 		if (!myInscriptionUtilisateur.getPassword().equals(myInscriptionUtilisateur.getPasswordCheck())) {
-			e.rejectValue("password", "pwdcheck", "Les mots de passe ne correspondent pas.");
+			e.rejectValue("password", "pwdcheck");
 		}
 	}
 }

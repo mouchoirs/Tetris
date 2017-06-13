@@ -14,6 +14,8 @@ import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 import fr.ascadis.security.SecurityType;
 import fr.ascadis.security.SecurityUser;
 
@@ -22,9 +24,10 @@ import fr.ascadis.security.SecurityUser;
 @Table(name="utilisateur", uniqueConstraints = { @UniqueConstraint(columnNames = "UTI_USERNAME") })
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name="UTI_TYPE", discriminatorType=DiscriminatorType.INTEGER)
-public abstract class Utilisateur implements Serializable, SecurityUser
+public class Utilisateur implements Serializable, SecurityUser
 {
 	private static final long serialVersionUID = 1L;
+	
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -32,15 +35,19 @@ public abstract class Utilisateur implements Serializable, SecurityUser
 	private int id;
 	
 	@Column(name="UTI_NOM")
+	@NotBlank
 	private String nom;
 	
 	@Column(name="UTI_PRENOM")
+	@NotBlank
 	private String prenom;
 	
 	@Column(name="UTI_USERNAME")
+	@NotBlank
 	private String username;
 	
 	@Column(name="UTI_PASSWORD")
+	@NotBlank
 	private String password;
 	
 	@Column(name = "UTI_TYPE", insertable = false, updatable = false)
@@ -86,6 +93,10 @@ public abstract class Utilisateur implements Serializable, SecurityUser
 	
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public void setType(int type) {
+		this.type = type;
 	}
 
 	public int getType() {
